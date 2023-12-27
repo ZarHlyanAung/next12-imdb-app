@@ -7,11 +7,11 @@ import { Inter } from 'next/font/google';
 const inter = Inter({ subsets: ['latin'] });
 
 export default function Home({ results }) {
-  //   console.log(results, 'in server side component');
+  console.log(results, 'in server side component');
 
   return (
     <div
-      className={`flex min-h-screen flex-col items-center ${inter.className}`}
+      className={`flex min-h-screen flex-col items-center ${inter.className} overflow-hidden`}
     >
       <Header />
 
