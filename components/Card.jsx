@@ -9,17 +9,17 @@ export default function Card({ result }) {
         src={BASE_URL + result.backdrop_path}
         width={200}
         height={100}
-        alt={result.title}
+        alt={result.title || result.name}
       />
       <div className="p-2">
         <h2 className="text-lg font-bold">{result.title || result.name}</h2>
-        <p className="line-clamp-2 text-lg hover:line-clamp-none">
+        <p className="line-clamp-2 text-lg hover:line-clamp-none hover:text-yellow-200">
           {result.overview}
         </p>
         <p className="flex items-center">
           {result.release_date || result.first_air_date}
           <HandThumbUpIcon className="h-5 ml-3 mr-1" />
-          {result.vote_count}
+          {result.vote_average} by {result.vote_count}
         </p>
       </div>
     </div>
